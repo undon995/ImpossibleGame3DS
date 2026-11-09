@@ -1,0 +1,15 @@
+build/
+*.elf
+*.3dsx
+*.cia
+*.smdh
+*.bnr
+*.icn
+*.map
+romfs/*
+!romfs/.gitkeep
+icon.png
+__pycache__/
+*.pyc
+.DS_Store
+*.zip
