@@ -2,6 +2,15 @@
 
 > **Unofficial homebrew adaptation** for Nintendo 3DS (including Old 3DS). This is an early **beta**, not a finished or official release. Not affiliated with the original game's developer or publisher.
 
+
+## Gameplay reference images
+
+These images are frames from the **original PC game's reference footage**, showing the visual style this 3DS beta aims to reproduce. **They are not screenshots captured from the 3DS beta.**
+
+![Original-game level section with jumping cube](docs/images/original_gameplay_jump.jpg)
+
+![Original-game gameplay reference](docs/images/original_gameplay_menu.jpg)
+
 ## Status
 - **Beta 0.7 source preview**
 - Five selectable level layouts
