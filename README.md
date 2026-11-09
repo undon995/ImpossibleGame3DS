@@ -5,11 +5,13 @@
 
 ## Gameplay reference images
 
-These images are frames from the **original PC game's reference footage**, showing the visual style this 3DS beta aims to reproduce. **They are not screenshots captured from the 3DS beta.**
+These are frames from the **original PC game's reference footage**, not screenshots captured from the 3DS beta.
 
-![Original-game level section with jumping cube](docs/images/original_gameplay_jump.jpg)
+### Level selection
+![Original game level-selection screen](screenshots/menu.webp)
 
-![Original-game gameplay reference](docs/images/original_gameplay_menu.jpg)
+### Gameplay: cube jump
+![Original game cube jumping over spikes](screenshots/jump.webp)
 
 ## Status
 - **Beta 0.7 source preview**
