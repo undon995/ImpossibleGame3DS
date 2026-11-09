@@ -1,0 +1,31 @@
+name: Publish Beta 0.7 source prerelease
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-beta07.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the source
+        uses: actions/checkout@v4
+
+      - name: Create source archive (no commercial game assets)
+        run: |
+          git archive --format=zip --output=ImpossibleGame3DS_Beta_0.7_Source.zip HEAD             source/ Makefile BUILD_MSYS2.sh prepare_assets.py prepare_levels.py README.md RELEASE_NOTES.md .gitignore
+
+      - name: Publish source-only prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v0.7.0-beta.1 >/dev/null 2>&1; then
+            echo "The v0.7.0-beta.1 release already exists. No duplicate will be made."
+          else
+            gh release create v0.7.0-beta.1 ImpossibleGame3DS_Beta_0.7_Source.zip               --title "The Impossible Game 3DS — Beta 0.7"               --notes-file RELEASE_NOTES.md               --prerelease               --target "$GITHUB_SHA"
+          fi
