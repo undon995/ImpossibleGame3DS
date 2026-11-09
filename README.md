@@ -3,6 +3,10 @@
 > **Unofficial homebrew adaptation** for Nintendo 3DS (including Old 3DS). This is an early **beta**, not a finished or official release. Not affiliated with the original game's developer or publisher.
 
 
+## Releases
+
+[**Beta 0.7 source-only prerelease**](https://github.com/undon995/ImpossibleGame3DS/releases/tag/v0.7.0-beta.1) — contains the buildable source archive, not the commercial game's graphics, music, CIA, or 3DSX binaries.
+
 ## Gameplay reference images
 
 These are frames from the **original PC game's reference footage**, not screenshots captured from the 3DS beta.
@@ -33,11 +37,11 @@ This public repository is **source-only**. You will need devkitPro MSYS2, devkit
 
 ```bash
 python prepare_assets.py "/path/to/your/original-game.zip"
-python prepare_levels.py --download
+python prepare_levels.py "/path/to/your/original-game.zip" --download
 bash BUILD_MSYS2.sh
 ```
 
-The build should create `ImpossibleGame3DS.3dsx`. Copy it to `SD:/3ds/ImpossibleGame3DS/` and launch via Homebrew Launcher. The installer commands only work after the full source files are committed.
+The build should create `ImpossibleGame3DS.3dsx`. Copy it to `SD:/3ds/ImpossibleGame3DS/` and launch via Homebrew Launcher. Build from the root of the repository after importing assets from your own game archive.
 
 ## Controls
 - **A / B / X / touchscreen:** Jump
