@@ -597,7 +597,8 @@ static void updateGame(float dt, bool jumpHeld, bool jumpPressed) {
     float oldY=player.y;
     player.x+=runSpeed*dt;
     advanceLevelEffects(dt);
-    player.vy-=fallGravity*dt;    player.y+=player.vy*dt;
+    player.vy-=fallGravity*dt;
+    player.y+=player.vy*dt;
 
     // Find surface crossings BEFORE side-collision checks. Adjacent raised
     // blocks otherwise occasionally killed the cube on its landing frame.
