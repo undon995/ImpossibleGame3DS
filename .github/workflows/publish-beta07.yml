@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/publish-beta07.yml'
       - 'source/main.c'
+      - 'prepare_assets.py'
+      - 'prepare_levels.py'
   workflow_dispatch:
 
 permissions:
