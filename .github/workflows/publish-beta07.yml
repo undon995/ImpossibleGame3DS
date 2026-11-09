@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/publish-beta07.yml'
+      - 'source/main.c'
   workflow_dispatch:
 
 permissions:
